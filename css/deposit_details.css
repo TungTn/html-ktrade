@@ -1,0 +1,121 @@
+body.deposit_details-page {
+	color: #002448;
+}
+.deposit_details .title-all span:nth-child(1)::after {
+	content: "";
+	margin: 0 15px;
+	width: 1px;
+	height: 28px;
+	background-color: #9b9b9b;
+	color: #9b9b9b;
+	display: inline-block;
+}
+.deposit_details .title-all {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+span.tit {
+	font-family: 'robotoregular', sans-serif;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+.deposit_details .title-all a {
+	color: #002448;
+}
+.deposit_details .content {
+	padding: 15px 25px;
+}
+.deposit_details .form-group {
+	display: flex;
+	flex-wrap: wrap;
+}
+.deposit_details .form-group .box-input {
+	margin: 15px 0;
+	align-items: center;
+	display: flex;
+}
+.deposit_details .form-group .box-input.box-top {
+	align-items: baseline;	
+}
+.deposit_details .form-group .form-base {
+	max-width: 360px;
+	font-family: 'robotolight', sans-serif;
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #525252;
+	background-color: #fff;
+	background-image: none;
+	border: 0.15em solid #002448;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.deposit_details .form-group .valid-feedback {
+	color: red;
+	font-size: 12px;
+	padding-left: 10px;
+}
+.deposit_details .input-group {
+	margin: 0;
+	border: 0;
+	position: relative;
+}
+.deposit_details .input-group span {
+	font-size: 14px;
+	color: #525252;
+}
+.deposit_details .input-group p {
+	color: #002448;
+	font-weight: bold;
+}
+.deposit_details .input-group-prepend {
+	position: absolute;
+	top: 8.5px;
+	right: 35px;
+}
+
+.form-pad {
+	padding: 6px 12px;
+}
+.btn-yellow {
+	padding: 8px 12px 6px;
+	margin-top: 12px;
+	background: #FDB618;
+	color: #002F6C;
+	max-width: 169px;
+	font-family: 'robotomedium', sans-serif;
+	width: 100%;
+	max-width: 150px;
+}
+.labeltxt {
+	width: 100%;
+	max-width: 130px;
+	padding:0 15px;
+	font-family: 'robotoregular', sans-serif;
+	font-weight: normal;
+}
+
+.custom-checkbox {
+	margin: 3px 0;
+}
+.custom-checkbox a {
+	color: #0063ED;
+	font-family: 'robotolightitalic', sans-serif;
+	font-weight: normal;
+}
+.btn-primary:hover {
+	color: #fff;
+	background-color: #002448;
+	border-color: #002448;
+}
+.custom-control-label {
+	padding-left: 10px;
+}

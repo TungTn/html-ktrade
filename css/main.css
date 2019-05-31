@@ -1,0 +1,207 @@
+body {
+    font-family: 'robotoregular', sans-serif;
+    background: #002448;
+}
+main {
+    background: #d8d8d8;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a:hover {
+    text-decoration: none;
+}
+.col-lg-8 {
+    padding-right: 0;
+}
+.component {
+    background: #fff;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+.title-all {
+    color: #01579b;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    color: #002448;
+    background: #ECEFF1;
+    padding: 15px 15px 15px 55px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+.ttl-mini {
+    border-bottom: solid 1px #C4C4C4;
+    padding: 0 20px 15px 40px;
+    margin-bottom: 10px;
+}
+.ttl-mini span.normal  {
+    font-weight: normal;
+    font-size: 16px;
+    color: #002448;
+}
+.title-all .normal:nth-child(2) {
+    padding-left: 20px;
+}
+.title-all::before {
+    font-size: 14px;
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    transform: translate(0,-50%);
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+.content {
+    padding: 15px 0;
+}
+input {
+	outline: none;
+}
+input[type=search] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	font-family: inherit;
+	font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+	display: none; 
+}
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+.nav-tabs {
+    background: none;
+    border-bottom: 1px solid #d8d8d8;
+
+}
+.nav-tabs > li.active > a {
+    background: none;
+    border: 0;
+    background-color:none;
+    color: #FFF;
+    text-decoration: none;
+}
+.nav-tabs > li.active {
+    padding-bottom: 15px;
+}
+.nav-tabs > li.active  span {
+    border-bottom:3px solid #002448;
+    padding-bottom: 12px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus, .nav-tabs > li > a:hover {
+    color: #002448;
+    cursor: pointer;
+    border: 0;
+    background: 0;
+}
+.nav-tabs > li > a {
+    border: 0;
+    color: #989898;
+    padding: 0 15px;
+    font-weight: normal;
+}
+.nav-tabs  a.first {
+    padding: 0 15px 0 0;
+}
+.table {
+    margin-bottom: 0;
+}
+.component.balances .money {
+    margin: 0;
+}
+.component.balances .money a {
+    font-size: 16px;
+    color: #002448;
+    font-family: 'robotolight';
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.total-count {
+    border: solid 1px #c4c4c4;
+    border-right: 0;
+    border-left: 0;
+    padding: 15px 0;
+}
+.total-count span {
+    font-size: 16px;
+    color: #525252;
+}
+.total-count span.left {
+    margin-right: 15px;
+}
+
+.vis {
+    margin-left: 40px;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.vis label {
+    color: #002448;
+    font-size: 10px;
+}
+.vis .labeltxt {
+    font-weight: bold;
+    padding-left: 10px;
+}
+.component.balances .money {
+    margin: 0;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 15px;
+}
+.text-right {
+    float:right;
+}
+i.fas.fa-chevron-up {
+    color: #01579B;
+}
+
+a.no-decoration {
+    color: #002448;
+    text-decoration: none;
+}
+
+
+.custom-checkbox {
+    display: flex;
+    width: 100%;
+}
+.btn-yellow {
+    margin-top: 12px;
+    background: #FDB618;
+    color: #002F6C;
+    max-width: 169px;
+    font-family: 'robotomedium', sans-serif;
+    min-width: 129px;
+}
+.custom-control-label a {
+    color: #0063ED;
+    font-family: 'robotolightitalic', sans-serif;
+    font-weight: normal;
+}
+
+.normal {
+    font-weight: normal;
+    font-family: 'robotolight';
+    padding-left: 5px;
+}

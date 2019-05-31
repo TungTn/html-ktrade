@@ -1,0 +1,119 @@
+.popup .modal-title {
+	font-size: 20px;
+	font-family: 'robotomedium';
+	color: #002448;
+}
+.popup .modal-header {
+	padding: 8.5px 15px;
+	background: #ECEFF1;
+	border-radius: 4px;
+}
+.popup.fade {
+	background: rgb(0, 36, 72, .6);
+}
+.popup .modal-dialog {
+	width: 536px;
+	margin: 0;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+}
+.modal.in .modal-dialog {
+	transform: translate(-50%, -50%);
+}
+.form__group--inline .msg {
+	line-height: 17px;
+	color: #002448;
+	margin-bottom: 15px;
+}
+.form__group--inline .msg-red {
+	color: #D61E00;
+}
+.form {
+	display: flex;
+}
+.form.rset {
+	margin: 16px 0 10px;
+}
+.form__label {
+	width: 20%;
+}
+
+.form__label label {
+	margin-top: 8px;
+	color: #002448;
+	font-size: 14px;
+	font-family: 'robotoregular';
+	font-weight: normal;
+}
+.form__input .newwindow {
+	width: 40%;
+	text-align: left;
+	padding-left: 30px;
+	background: url("../images/icon_content/lock.png") no-repeat;
+	background-position: 11px 10px;
+	margin-bottom: 15px;
+}
+.form__input .newwindow .green {
+	color: #008141;
+}
+.form__input {
+	width: 80%;
+}
+.form__input .form-signup {
+	border: 1.5px solid #002448;
+	box-shadow: 1px 1px 1px 1px #DFDFDF;
+	height: 36px;
+	font-family: 'robotolight' !important;
+	color: #525252;
+}
+.alert {
+	margin: 10px 0;
+	color: #D61E00;
+	font-family: 'robotolight';
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	font-style: italic;
+	font-size: 14px;
+}
+label.custom-control-label {
+	width: calc(100% - 23px);
+	font-weight: normal;
+	color: #002448;
+}
+.custom-control-label .rmbtxt:after {
+	content: "|";
+	margin: 0 10px;
+}
+.custom-checkbox {
+	margin: 15px 0 0;
+}
+.btn-yellow {
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+.btn {
+	padding: 10px 12px;
+	line-height: 1;
+}
+
+.btn-signin {
+	display: flex;
+	align-items: center;
+}
+.btn-signin .signinbtn {
+	margin: 10px 0 0 15px;
+}
+.nolink {
+	cursor: pointer;
+	color: #0063ED;
+	font-family: 'robotolightitalic', sans-serif;
+	font-weight: normal;
+}
+.btn-signup {
+	margin-top: 5px;
+}
+.form__label .confirm {
+	margin-top: 0;
+}

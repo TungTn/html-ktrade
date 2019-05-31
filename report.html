@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>KTrade</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="boostrap/bootstrap.css" type="text/css">
+	<link rel="stylesheet" href="css/header.css" type="text/css">	
+	<link rel="stylesheet" href="css/sidebar.css" type="text/css">
+	<link rel="stylesheet" href="css/main.css" type="text/css">
+	<link rel="stylesheet" href="css/report.css" type="text/css">
+	<link rel="stylesheet" href="css/grey.css" type="text/css">
+	<link rel="stylesheet" href="css/fonts.css" type="text/css">
+	<link rel="stylesheet" href="css/datepicker.css" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/icheck.js"></script>
+	<script src="js/datepicker.js"></script>
+	<script src="js/CommonModule.js"></script>
+</head>
+
+<body class="report-page">
+	<header>
+		<div class="container">
+			<div class="nav-header">
+				<div class="logo">
+					<a href="#">
+						<img src="images/logo.png" alt="Ktrade Logo">
+					</a>
+				</div>
+				<div class="spot">
+					<div id="custom-search-input">
+						<div class="input-group col-md-12">
+							<form class="searchbox">
+								<input type="search" class="search-top" placeholder="Search">
+							</form>
+						</div>
+					</div>
+					<a href="#" class="active">SPOT</a>
+					<a href="#" class="">MARGIN</a>
+				</div>
+
+				<nav class="navbar navbar-default navbar-expand-lg">
+					<div class="">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li class="dropdown active">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">HOME</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">TRADING</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">DEPOSIT</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">DEPOSIT CASH</a></li>
+										<li><a href="#">DEPOSIT CRYPTO</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">WITHDRAW</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">WITHDRAW CASH</a></li>
+										<li><a href="#">WITHDRAW CRYPTO</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">BALANCE</a>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+									aria-haspopup="true" aria-expanded="false">REPORT</a>
+									<ul class="dropdown-menu">
+										<li><a href="#">REPORT CASH</a></li>
+										<li><a href="#">REPORT CRYPTO</a></li>
+										<li><a href="#">REPORT TRADING</a></li>
+									</ul>
+								</li>
+							</ul>
+							<div class="searchbox hidden-sm hidden-md hidden-lg">
+								<div id="custom-search-input">
+									<div class="input-group col-md-12">
+										<form class="searchbox">
+											<input type="search" placeholder="Search">
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+				<div class="user-group">
+					<ul class="nav navbar-nav">
+						<li><a href="#">NAME</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+							aria-haspopup="true" aria-expanded="false"><i class="far fa-user"></i></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a class="link signup" data-toggle="modal" data-target="#signup"> Sign Up
+									</a>
+								</li>
+								<li>
+									<a class="link login" data-toggle="modal" data-target="#signin"> Sign In
+									</a>
+								</li>
+								<li>
+									<a class="link rsetpw" data-toggle="modal" data-target="#rsetpw"> Reset
+									</a>
+								</li>
+								<li>
+									<a class="link logout" > Log out
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li><a class="link setting"><i class="fas fa-cog"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="component report">
+						<a class="no-decoration" data-toggle="collapse" href="#report" role="button" aria-expanded="false" aria-controls="report">
+							<div class="title-all">
+								<span>REPORT</span>
+								<span>Cash</span>
+							</div>
+						</a>
+						<div id="report" class="content in">
+							<div class="row">
+								<div class="content-button">
+									<form action="" class="form-horizontal"  role="form">
+										<div class="kt-form__group kt-form__group--inline">
+											<div class="kt-form">
+												<div class="kt-form__label">
+													<label>Filter</label>
+												</div>
+												<div class="kt-form__control">
+													<select class="form-control bootstrap-select">
+														<option value="">Deposit</option>
+														<option value="1">Pending</option>
+														<option value="2">Delivered</option>
+														<option value="3">Canceled</option>
+														<option value="4">Success</option>
+														<option value="5">Info</option>
+														<option value="6">Danger</option>
+													</select>
+												</div>
+											</div>
+											<div class="kt-form">
+												<div class="kt-form__label">
+													<label>Currency</label>
+												</div>
+												<div class="kt-form__control">
+													<select class="form-control bootstrap-select">
+														<option value="">USD</option>
+														<option value="1">Pending</option>
+														<option value="2">Delivered</option>
+														<option value="3">Canceled</option>
+														<option value="4">Success</option>
+														<option value="5">Info</option>
+														<option value="6">Danger</option>
+													</select>
+												</div>
+											</div>
+											<div class="kt-form">
+												<div class="kt-form__label">
+													<label>From</label>
+												</div>
+												<div class="kt-form__control">
+													<input class="form-control" type="text" value="" data-toggle="datepicker">
+												</div>
+											</div>
+											<div class="kt-form">
+												<div class="kt-form__label">
+													<label>To</label>
+												</div>
+												<div class="kt-form__control">
+													<input class="form-control" type="text" value="" data-toggle="datepicker">
+												</div>
+											</div>
+											<div class="kt-form">
+												<button mat-raised-button color="primary"
+												class="btn-transfer btn-yellow">Search</button>	
+											</div>											
+										</div>										
+									</form>
+								</div>
+								<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+									<div class="kt-portlet kt-portlet--mobile">
+										<div class="kt-portlet__body kt-portlet__body--fit">
+											<!--begin: Datatable -->
+											<table class="kt-datatable" id="html_table" width="100%">
+												<thead>
+													<tr>
+														<th title="Field #1"><span>#</span></th>
+														<th title="Field #2"><span>Transaction</span></th>
+														<th title="Field #3"><span>Date</span></th>
+														<th title="Field #4"><span>Type</span></th>
+														<th title="Field #5"><span>Currency</span></th>
+														<th title="Field #6"><span>Status</span></th>
+														<th title="Field #7"><span>Amount</span></th>
+														<th title="Field #8"><span>Fee</span></th>
+														<th title="Field #9"><span>Content</span></th>
+														<th title="Field #10"><span>Destination</span></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="deposit">
+														<td>123456</td>
+														<td><a href="#" data-toggle="tooltip" title="23423abcfed23423" data-placement="bottom">23423abcfed..</a></td>
+														<td>20-03-19<br>16:44:40</td>
+														<td>Deposit</td>
+														<td>USD</td>
+														<td>Completed</td>
+														<td>0.123456</td>
+														<td>-0.004</td>
+														<td>Deposit Cash 1234<br>Deposit Cash 1234</td>
+														<td>123abc456def</td>
+													</tr>
+													<tr class="deposit">
+														<td>123456</td>
+														<td><a href="#" data-toggle="tooltip" title="23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh" data-placement="bottom">23423abcfed..</a></td>
+														<td>20-03-19<br>16:44:40</td>
+														<td>Deposit</td>
+														<td>USD</td>
+														<td>Completed</td>
+														<td>0.123456</td>
+														<td>-0.004</td>
+														<td>Deposit Cash 1234<br>Deposit Cash 1234</td>
+														<td>123abc456def</td>
+													</tr>
+													<tr class="withdraw">
+														<td>123456</td>
+														<td><a href="#" data-toggle="tooltip" title="23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh" data-placement="bottom">23423abcfed..</a></td>
+														<td>20-03-19<br>16:44:40</td>
+														<td>Withdraw</td>
+														<td>USD</td>
+														<td>Completed</td>
+														<td>0.123456</td>
+														<td>-0.004</td>
+														<td>Deposit Cash 1234<br>Deposit Cash 1234</td>
+														<td>123abc456def</td>
+													</tr>	
+													<tr class="deposit">
+														<td>123456</td>
+														<td><a href="#" data-toggle="tooltip" title="23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh" data-placement="bottom">23423abcfed..</a></td>
+														<td>20-03-19<br>16:44:40</td>
+														<td>Deposit</td>
+														<td>USD</td>
+														<td>Completed</td>
+														<td>0.123456</td>
+														<td>-0.004</td>
+														<td>Deposit Cash 1234<br>Deposit Cash 1234</td>
+														<td>123abc456def</td>
+													</tr>
+													<tr class="deposit">
+														<td>123456</td>
+														<td><a href="#" data-toggle="tooltip" title="23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh" data-placement="bottom">23423abcfed..</a></td>
+														<td>20-03-19<br>16:44:40</td>
+														<td>Deposit</td>
+														<td>USD</td>
+														<td>Completed</td>
+														<td>0.123456</td>
+														<td>-0.004</td>
+														<td>Deposit Cash 1234<br>Deposit Cash 1234</td>
+														<td>123abc456def</td>
+													</tr>	
+													<tr class="withdraw">
+														<td>123456</td>
+														<td><a href="#" data-toggle="tooltip" title="23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh23423abcfed23423abcfedgh" data-placement="bottom">23423abcfed..</a></td>
+														<td>20-03-19<br>16:44:40</td>
+														<td>Withdraw</td>
+														<td>USD</td>
+														<td>Completed</td>
+														<td>0.123456</td>
+														<td>-0.004</td>
+														<td>Deposit Cash 1234<br>Deposit Cash 1234</td>
+														<td>123abc456def</td>
+													</tr>												
+												</tbody>
+											</table>
+											<!--end: Datatable -->
+											<div class="kt-datatable__pager kt-datatable--paging-loaded">
+												<ul class="kt-datatable__pager-nav">
+													<li>
+														<a title="First" class="kt-datatable__pager-link">
+															<i class="fas fa-angle-double-left"></i>
+														</a>
+													</li>
+													<li>
+														<a title="Previous" class="kt-datatable__pager-link">
+															<i class="fas fa-angle-left"></i>
+														</a>
+													</li>
+													<li>
+														<a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active" data-page="1" title="1"><span>Page 1 of 1</span></a>
+													</li>
+													<li>
+														<a title="Next" class="kt-datatable__pager-link">														
+															<i class="fas fa-angle-right"></i>
+														</a>
+													</li>
+													<li>
+														<a title="Last" class="kt-datatable__pager-link">
+															<i class="fas fa-angle-double-right"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+											<div class="buttoncsv">
+												<button class="btn btn-primary dropdown-toggle btn-export" type="button" data-toggle="dropdown">EXPORT CSV
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+                    <div class="component status">
+                        <div class="status__name">
+                            BTC/USD
+                        </div>
+                        <div class="status__money">
+                            <p class="status__money--ttl">$3,834.05 <img src="images/icon_content/up_arrow.png"></p>
+                            <p>
+                                <span class="money__percent">+9.36%</span>
+                                <span class="money__up">+0.00123012</span>
+                                <span class="money__total">$31.77</span>
+                            </p>
+                        </div>
+                        <div class="status__highlow">
+                            <p><span class="hl--ttl">24h High</span> <span>0.01414048</span></p>
+                            <p><span class="hl--ttl">24h Low</span> <span>0.01233108</span></p>
+                            <p><span class="hl--ttl">24h Vol</span> <span>1,433,913</span></p>
+                        </div>
+                    </div>
+                    <div class="component favorite">
+                        <div class="title-all">
+                            <a class="no-decoration" data-toggle="collapse" href="#favorite" role="button" aria-expanded="false" aria-controls="favorite">
+                                Favorites
+                            </a>
+                            <div class="right">
+                                <div class="searchform_aside">
+                                    <form class="searchbox">
+                                        <input type="search" class="search-aside">
+                                    </form>
+                                </div>
+                                <div class="menu_aside">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>                                
+                            </div>           
+                        </div>
+                        <div id="favorite" class="content in">
+                            <div class="money">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#usd" class="first"><span>USD</span></a></li>
+                                    <li><a data-toggle="tab" href="#jpy"><span>JPY</span></a></li>
+                                    <li><a data-toggle="tab" href="#btc"><span>BTC</span></a></li>
+                                    <li><a data-toggle="tab" href="#eth"><span>ETH</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content content">
+                                <div id="usd" class="tab-pane fade in active">
+                                    <table class="table table__favorite table__favorite__btc">
+                                        <thead class="table__head">
+                                            <tr>
+                                                <th>PAIR</th>
+                                                <th class="price">PRICE</th>
+                                                <th>CHANGE</th>
+                                                <th>VOL <span class="ttl--vol">USD</span></th>
+                                            </ul>
+                                        </thead>
+                                        <tbody class="table__content">
+                                            <tr>                                
+                                                <td><img src="images/icon_crypto/ic_bit.png" alt="">BTC/USD</td>
+                                                <td>0.00000012</td>
+                                                <td class="plus">4.82%</td>
+                                                <td>16,577,592</td>
+                                            </tr> 
+                                            <tr>                                
+                                                <td><img src="images/icon_crypto/ic_eth.png" alt="">ETH/USD</td>
+                                                <td>0.00001318</td>
+                                                <td class="minus">-4.17%</td>
+                                                <td>103,188</td>
+                                            </tr>
+                                            <tr>                                
+                                                <td><img src="images/icon_crypto/ic_xrp1.png" alt="">XRP/USD</td>
+                                                <td>0.00000012</td>
+                                                <td class="plus">0.00%</td>
+                                                <td>98,810</td>
+                                            </tr>
+                                            <tr>                                
+                                                <td><img src="images/icon_crypto/ic_lite.png" alt="">LTC/USD</td>
+                                                <td>0.051263</td>
+                                                <td class="minus">-10.15%</td>
+                                                <td>68,810</td>
+                                            </tr>
+                                            <tr>                                
+                                                <td><img src="images/icon_crypto/ic_unknow.png" alt="">BSV/USD</td>
+                                                <td>0.00000012</td>
+                                                <td class="plus">0.00%</td>
+                                                <td>15,028</td>
+                                            </tr>
+                                            <tr>                                
+                                                <td><img src="images/icon_crypto/ic_unknow.png" alt="">BAB/USD</td>
+                                                <td>0.00000012</td>
+                                                <td class="plus">0.00%</td>
+                                                <td>7,283</td>
+                                            </tr>                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="jpy" class="tab-pane fade in">
+                                    <table class="table table__favorite table__favorite__btc">
+                                        <thead class="table__head">
+                                            <tr>
+                                                <th>PAIR</th>
+                                                <th class="price">PRICE</th>
+                                                <th>CHANGE</th>
+                                                <th>VOL <span>USD</span></th>
+                                            </ul>
+                                        </thead>
+                                        <tbody class="table__content">
+                                            <tr>                                
+                                                <td><img src="images/icon_content/star-line.png" alt=""> HOT/BTC</td>
+                                                <td>0.00000012</td>
+                                                <td>4.82%</td>
+                                                <td class="plus">0.00%</td>
+                                            </tr>                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="input-radio">
+                                <div class="radio-item">
+                                    <input type="radio" id="ritema" name="ritem" value="ropt1" checked>
+                                    <label for="ritema">CHANGE</label>
+                                </div>
+
+                                <div class="radio-item">
+                                    <input type="radio" id="ritemb" name="ritem" value="ropt2">
+                                    <label for="ritemb">VOLUME</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component neworder">
+                        <div class="title-all">
+                            <a class="no-decoration" data-toggle="collapse" href="#neworder" role="button" aria-expanded="false" aria-controls="neworder">
+                                New Order <span class="normal">BTC/USD</span>
+                            </a>
+                            <div class="menu_aside">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>                      
+                        </div>
+                        <div id="neworder" class="content in">
+                            <div class="neworder__tab">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a data-toggle="tab" href="#spot" class="first"><span>SPOT</span></a></li>
+                                    <li><a data-toggle="tab" href="#margin"><span>MARGIN</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="tab-content content">
+                                <div id="spot" class="tab-pane fade in active">
+                                    <div class="tab__in">
+                                        <div class="tab__content">
+                                            <div class="tab__block">
+                                                <form action="" class="form-horizontal"  role="form">
+                                                    <div class="input-group">
+                                                        <input type="button" value="" class="button-minus button-minus-price" data-field="price" disabled>
+                                                        <input type="number" step="1" id="price" max="" value="" name="price" class="input-field price-field" placeholder="Price">
+                                                        <input type="button" value="" class="button-plus button-plus-price" data-field="price" disabled>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <input type="button" value="" class="button-minus button-minus-amount" data-field="amount" disabled>
+                                                        <input type="number" step="1" max="" value="" id="amount" name="amount" class="input-field amount-field" placeholder="Amount">
+                                                        <input type="button" value="" class="button-plus button-plus-amount" data-field="amount" disabled>
+                                                    </div>
+                                                    <div class="box__button">
+                                                        <button class="percent">25%</button>
+                                                        <button class="percent">50%</button>
+                                                        <button class="percent">75%</button>
+                                                        <button class="percent">100%</button>
+                                                    </div>
+                                                    <div class="box_button__buy">
+                                                        <button class="buy">BUY</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="tab__block">
+                                                <form action="" class="form-horizontal"  role="form">
+                                                    <div class="kt-form__group kt-form__group--inline">
+                                                        <div class="kt-form">
+                                                            <div class="kt-form__control">
+                                                                <select class="form-control bootstrap-select">
+                                                                    <option value="">Limit Buy</option>
+                                                                    <option value="1">Pending</option>
+                                                                    <option value="2">Delivered</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>  
+                                                    <p class="txt"><span>Total</span><span>0.0000BTC</span></p>
+                                                    <div class="box_button__sell">
+                                                        <button class="sell">SELL</button>
+                                                    </div>                                    
+                                                </form>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="tab__avai">
+                                            <p>Avail. <span>0.0000BTC</span></p>
+                                        </div>
+                                        <!-- <div class="cancle">
+                                            <a href="#" class="cancle_btn"><span>Cancel All Orders</span></a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div id="margin" class="tab-pane fade in">
+                                    <div class="table table__favorite table__favorite__btc">
+                                        123
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="component balances aside">
+                        <div class="title-all">
+                            <a class="no-decoration" data-toggle="collapse" href="#balancesaside" role="button" aria-expanded="false" aria-controls="balancesaside">
+                                Balances
+                            </a>
+                            <div class="right">
+                                <div class="searchform_aside">
+                                    <form class="searchbox">
+                                        <input type="search" class="search-aside">
+                                    </form>
+                                </div> 
+                                <div class="list_aside">
+                                    <i class="fas fa-list-ul"></i>
+                                </div> 
+                                <div class="menu_aside">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>                         
+                            </div>                       
+                        </div>
+                        <div id="balancesaside" class="content in">
+                            <div class="money">
+                                <a href="#">BALANCES DETAILS</a>
+                            </div>
+                            <table class="table table__favorite table__favorite__btc">
+                                <thead class="table__head">
+                                    <tr>
+                                        <th>NAME</th>
+                                        <th class="text-center">SPOT</th>
+                                        <th class="text-right">MARGIN</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody class="table_content">
+                                    <tr>
+                                        <td><img src="images/icon_crypto/ic_bitcoin.png" alt=""> BTC</td>
+                                        <td class="text-center">0<br>0</td>
+                                        <td class="text-right">0<br>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/icon_crypto/ic_JPN.png" alt=""> JPN</td>
+                                        <td class="text-center">0<br>0</td>
+                                        <td class="text-right">0<br>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="images/icon_crypto/ic_Usd.png" alt=""> USD</td>
+                                        <td class="text-center">0<br>0</td>
+                                        <td class="text-right">0<br>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="total-count">
+                                <p>
+                                    <span class="left">USD</span>
+                                    <span>EQUIVALENT</span>
+                                    <span class="text-right">$ 692.94</span>
+                                </p>                                
+                            </div>
+                        </div>
+                        <div class="summary">
+                            <div class="title">
+                                <a class="no-decoration" data-toggle="collapse" href="#summary" role="button" aria-expanded="false" aria-controls="summary">
+                                    Summary
+                                </a>
+                                <div class="text-right">MARGIN</div>
+                            </div>
+                            <div id="summary" class="content in">
+                                <div class="content-summary">
+                                    <ul>
+                                        <li>
+                                            <span class="text-left">BTC/USD Tradable Balance</span>
+                                            <span class="text-right">0.0</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-left">BTC/USD Maintenance</span>
+                                            <span class="text-right">15.00%</span>
+                                        </li>
+                                        <li>
+                                            <span class="text-left">Required Equilty</span>
+                                            <span class="text-right">302.54</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</main>
+	<div id="signup" class="modal fade popup" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						SIGN UP
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form action="" class="form-horizontal"  role="form">
+						<div class="form__group form__group--inline">
+							<div class="form">
+								<div class="form__label">
+									<label>Email</label>
+								</div>
+								<div class="form__input">
+									<input class="form-control form-signup" type="email" value="">
+									<p class="alert">* Email not valid</p>
+								</div>                               
+							</div>
+							<div class="form">
+								<div class="form__label">
+									<label>Password</label>
+								</div>
+								<div class="form__input">
+									<input class="form-control form-signup" type="password" value="">
+									<p class="alert">* Password not valid</p>
+								</div>                                
+							</div>
+							<div class="form">
+								<div class="form__label">
+									<label class="confirm">Confirm password</label>
+								</div>
+								<div class="form__input">
+									<input class="form-control form-signup" type="password" value="">
+									<p class="alert">* Confirm password not valid</p>
+								</div>                                
+							</div>
+							<div class="form">
+								<div class="form__label">
+									<label>&nbsp;</label>
+								</div>
+								<div class="form__input">
+									<select class="form-control form-signup bootstrap-select">
+										<option value="">(GMT+07:)Hanoi</option>
+										<option value="1">Pending</option>
+										<option value="2">Delivered</option>
+										<option value="3">Canceled</option>
+										<option value="4">Success</option>
+										<option value="5">Info</option>
+										<option value="6">Danger</option>
+									</select>
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="customControlInline" checked>
+										<label class="custom-control-label" for="customControlInline">I have read, understand and agree to the <a href="#">Terms & conditions</a> and <a href="#">Anti-spam policy.</a></label>
+									</div> 
+									<button mat-raised-button color="primary"
+									class="btn btn-primary btn-yellow btn-signup">open account</button> 
+								</div>
+							</div>                                                                 
+						</div>                                      
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="signin" class="modal fade popup" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						SIGN IN
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form action="" class="form-horizontal"  role="form">
+						<div class="form__group form__group--inline">
+							<p class="msg">Please check that you are visiting https://kajiyu.com</p>
+							<div class="form">
+								<div class="form__label">
+									<label>&nbsp;</label>
+								</div>
+								<div class="form__input">
+									<div class="form-control form-signup newwindow">
+										<span class="green">https</span>://kajiyu.com
+									</div>                                   
+								</div>                               
+							</div>
+							<div class="form">
+								<div class="form__label">
+									<label>Email</label>
+								</div>
+								<div class="form__input">
+									<input class="form-control form-signup" type="eail" value="">
+									<p class="alert">* Email not valid</p>
+								</div>                                
+							</div>
+							<div class="form">
+								<div class="form__label">
+									<label>Password</label>
+								</div>
+								<div class="form__input">
+									<input class="form-control form-signup" type="password" value="">
+									<p class="alert">* Password not valid</p>
+								</div>                                
+							</div>
+							<div class="form">
+								<div class="form__label">
+									<label>&nbsp;</label>
+								</div>
+								<div class="form__input">
+									<div class="custom-control custom-checkbox">
+										<input type="checkbox" class="custom-control-input" id="rmbme">
+										<label class="custom-control-label" for="rmbme"><span class="rmbtxt">Remember me</span><a data-dismiss="modal" data-toggle="modal" data-target="#rsetpw" class="nolink">Forgot password?</a></label>
+									</div> 
+									<div class="btn-signin">
+										<button mat-raised-button color="primary"
+										class="btn btn-primary btn-yellow">sign in</button>
+										<span class="signinbtn">Don't have an account ? <a data-dismiss="modal" data-toggle="modal" data-target="#signup" class="nolink">Sign up here</a></span> 
+									</div>
+								</div>
+							</div>                                                                 
+						</div>                                      
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="rsetpw" class="modal fade popup" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						PASSWORD RESET
+					</h4>
+				</div>
+				<div class="modal-body">
+					<form action="" class="form-horizontal"  role="form">
+						<div class="form__group form__group--inline">
+							<p class="msg msg-red">For safety reasons, no withdrawal order is accepted within 24 hours of the change in account security.</p>
+							<p class="msg">Begin the password reset process by requesting an email to the account email address. You will receive an email with details for completing the reset.</p>
+							<p class="msg">Please contact support from Kaijyu if you have any questions or concerns.</p>
+							<div class="form rset">
+								<div class="form__label">
+									<label>Your email</label>
+								</div>
+								<div class="form__input">
+									<input class="form-control form-signup" type="email" value="">                                 
+								</div>                               
+							</div> 
+							<div class="form">
+								<div class="form__label">
+									<label>&nbsp;</label>
+								</div>
+								<div class="form__input">
+									<div class="btn-signin">
+										<button mat-raised-button color="primary"
+										class="btn btn-primary btn-yellow">Submit</button>
+									</div>
+								</div>
+							</div>                                                              
+						</div>                                      
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+
+</html>

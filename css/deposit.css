@@ -1,0 +1,132 @@
+.deposit-page .deposit .title-all {
+	padding: 9px 0;
+	display: flex;
+	font-family: 'robotomedium', sans-serif;
+}
+.deposit-page .deposit .title-all .support .txt{
+	display: flex;
+	align-items: unset;
+	margin-top: 0;
+	font-size: 20px;
+	font-family: 'robotomedium', sans-serif;
+	text-decoration: none;
+}
+.deposit-page .deposit .title-all .support .txt::before {
+	content: "";
+	margin: 0 17px 0 0;
+	width: 1px;
+	height: 28px;
+	background-color: #9b9b9b;
+	color: #9b9b9b;
+	display: inline-block;
+}
+.deposit-page .deposit .title-all::before {
+	content: '';
+}
+.deposit-page .deposit .content {
+	display: flex;
+}
+.deposit-page .deposit .content .box-block {
+	margin-bottom: 25px;
+}
+.deposit-page .deposit .content .box-block .ttl {
+	font-size: 14px;
+	font-family: 'robotoregular', sans-serif;
+	color: #002448;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+.deposit-page .deposit .content .box-block .tbl {
+	box-shadow: #efefef 1px 2px 1px 0px;
+}
+.deposit-page .deposit .content .box-block ul {
+	padding-left: 0;
+	border: 0.15rem solid #002448;
+	border-radius: 4px;
+}
+.deposit-page .deposit .content .box-block ul li{
+	border-bottom: 1px solid #c4c4c4;
+	padding: 5px 15px;
+	display: flex;
+	align-items: center;
+	font-family: 'robotolight', sans-serif;
+	color: #525252;
+}
+.deposit-page .deposit .content .box-block ul li:last-child {
+	border-bottom: 0;
+}
+.deposit-page .deposit .content .box-block ul li img {
+	margin-right: 10px;
+}
+.deposit-page .deposit .content .box-right {
+	padding-right: 0;
+}
+
+.deposit-page .deposit .content .box-support .ttl {
+	margin-bottom: 15px;
+}
+.deposit-page .deposit .content .box-support .tbl {
+	font-family: 'robotolightitalic', sans-serif;
+}
+.deposit-page .deposit .content .box-support .tbl p {
+	margin: 0 0 3px;
+}
+.deposit-page .deposit .content .box-support .tbl ul li {
+	display: flex;
+	align-items: center;
+	padding:2px 0;	
+}
+.deposit-page .deposit .content .box-support .tbl ul li a {
+	color: #0063ED;
+}
+.deposit-page .deposit .content .box-support .tbl ul li:before{
+	content: "";
+	background: url(../images/deposit_page/ic_right.png);	
+	width: 24px;
+	height: 24px;
+	color: #9b9b9b;
+	display: inline-block;
+}
+.deposit-page .deposit .content .box-support:nth-child(2) .ttl {
+	display: flex;
+	justify-content: space-between;
+	color: #002448;
+	background: #ECEFF1;
+	padding: 9px 15px 9px 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	border-radius: 4px 4px 0 0;
+	font-family: 'robotomedium', sans-serif;
+}
+.deposit-page .deposit .content .box-support:nth-child(2) .ttl .ttl-right a{
+	font-size: 14px;
+	font-family: 'robotolightitalic', sans-serif;
+	text-transform: capitalize;
+	padding:0 10px;
+}
+.deposit-page .deposit .content .box-support:nth-child(2) .ttl .ttl-right a:last-child {
+	padding: 0;
+}
+.deposit-page .deposit .content .box-support .tbl:nth-child(2) {
+	padding:0 15px 0 20px;
+	display: flex;
+	justify-content: space-between;
+	color: #002448;
+}
+.deposit-page .deposit .content .box-support:nth-child(2) .tbl {
+	font-family: 'robotoregular', sans-serif;
+}
+.deposit-page .deposit .content .box-support:nth-child(2) .tbl span {
+	font-family: 'robotolight', sans-serif;
+	color: #525252;
+	font-size: 12px;
+}
+.deposit-page .deposit .content .box-support:nth-child(2) .tbl span.txt-right {
+	text-align: right;
+	display: block;
+	font-size: 12px;
+}
+.deposit .status {
+	display: initial;
+	padding: 0;
+}

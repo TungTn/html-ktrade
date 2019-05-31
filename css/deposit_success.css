@@ -1,0 +1,67 @@
+h2 {
+	font-size: 42px;
+	font-family: 'robotomedium';
+	color: #FDB618;
+}
+p {
+	font-size: 20px;
+	font-family: 'robotoregular';
+	color: #002448;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.md {
+	font-family: 'robotomedium';
+}
+.hot {
+	font-family: 'robotomedium';
+	color: #D61E00;
+}
+.time {
+	font-family: 'robotolight';
+	color: #D61E00;
+}
+.deposit_success {
+	padding:85px 65px 0;
+}
+.box__success, .box__fail, .box__wait {
+	text-align: center;
+}
+.box__wait {
+	margin-top: 20px;
+}
+.box__success h2 {
+	margin: 15px 0;
+}
+.box__fail h2 {
+	margin: 15px 0;
+}
+.box__fail p {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.box__fail a {
+	display: inline-block;
+	background: #FDB618;
+	color: #002448;
+	font-weight: bold;
+	padding: 7.5px 25px;
+	border-radius: 4px;
+	border: 1px solid #002448;
+}
+.box__fail a:hover {
+	color: #FFF;
+	background: #002448;
+}
+.box__block {
+	display: flex;
+	justify-content: center;
+}
+.box__txt {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+.box__txt:nth-child(1) {
+	margin-right: 55px;
+}
